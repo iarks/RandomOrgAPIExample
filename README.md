@@ -46,8 +46,9 @@ rn.generate(5, 10, 2, false, "method")
 | `min`         | integer  | The lower boundary for the range from which the random numbers will be picked. Must be within the [-1e9,1e9] range.|
 | `max`         | integer  | The upper boundary for the range from which the random numbers will be picked. Must be within the [-1e9,1e9] range.|
 | `replacement` | Boolean  | Specifies whether the random numbers should be picked with replacement. Passing `true` will cause the numbers to be picked with replacement, i.e., the resulting set of numbers may contain duplicate values (like a series of dice rolls). If you want the set of numbers picked to be unique (like raffle tickets drawn from a container), set this value to `false`.|
-| `id`          | String   | An identifier, which will be returned in the response. Can be anything. Does not influence output.|                                                                                                                                                                                                                                                             |
-<br><br>
+| `id`          | String   | An identifier, which will be returned in the response. Can be anything. Does not influence output.|
+
+
 * `int[] getElementAsArray()`<br>Returns an integer array containing the generated random numbers. Always call this method **after** calling `generate()` method, otherwise it will throw an `InvalidMethodCallException`, because the numbers have not been generated as yet.
 <br>Use the following code snippet to obtain the array of generated numbers.
 ```
